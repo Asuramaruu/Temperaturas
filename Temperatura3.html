@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    </style>
+</head>
+<body>
+    Celsius<input type="text" id="inpEntradaCelsius"> <button onclick="Calcular1()">Conversão</button> <input type="text" id="inpSaidaCelsius">Celsius<br>
+    Fahrenheit<input type="text" id="inpEntradaFahrenheit"> <button onclick="Calcular2()">Conversão</button> <input type="text" id="inpSaidaFahrenheit">Fahrenheit<br>
+    Kelvin<input type="text" id="inpEntradaKelvin"> <button onclick="Calcular3()">Conversão</button> <input type="text" id="inpSaidaKelvin">Kelvin<br>
+
+    <div></div>
+
+
+    <script>
+        function Calcular1()
+        {
+            var celsius = parseFloat(document.getElementById("inpEntradaCelsius").value)
+            var fahrenheit = celsius * 1.8 + 32
+            var kelvin = celsius + 273.15
+
+            document.getElementById("inpSaidaCelsius").value = celsius
+            document.getElementById("inpSaidaFahrenheit").value = fahrenheit
+            document.getElementById("inpSaidaKelvin").value = kelvin.toFixed(0)
+
+        }
+
+        function Calcular2()
+        {
+            var fahrenheit = parseFloat(document.getElementById("inpEntradaFahrenheit").value)
+            var celsius = (fahrenheit - 32) / 1.8
+            var kelvin = (fahrenheit - 32) * (5 / 9) + 273
+
+            document.getElementById("inpSaidaCelsius").value = celsius.toFixed(0)
+            document.getElementById("inpSaidaFahrenheit").value = fahrenheit
+            document.getElementById("inpSaidaKelvin").value = kelvin.toFixed(0)
+
+
+        }
+
+        function Calcular3()
+        {
+            var kelvin = parseFloat(document.getElementById("inpEntradaKelvin").value)
+            var celsius = kelvin - 273
+            var fahrenheit = (kelvin - 273) * 1.8 + 32
+
+            document.getElementById("inpSaidaCelsius").value = celsius.toFixed(0)
+            document.getElementById("inpSaidaFahrenheit").value = fahrenheit.toFixed(0)
+            document.getElementById("inpSaidaKelvin").value = kelvin
+
+
+        }
+    
+        
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
